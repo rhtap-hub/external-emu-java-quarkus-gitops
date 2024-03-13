@@ -1,0 +1,12 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+commonLabels:         
+  rhtap/gitops: external-emu-java-quarkus 
+  janus-idp.io/tekton: external-emu-java-quarkus
+  backstage.io/kubernetes-id: external-emu-java-quarkus
+  backstage.io/kubernetes-namespace: rhtap-demo 
+  app.kubernetes.io/part-of: external-emu-java-quarkus
+resources: 
+- application-dev.yaml 
+- application-stage.yaml 
+- application-prod.yaml  
